@@ -1,0 +1,10 @@
+{
+	"name": "language-secatalog",
+	"version": "0.0.1",
+	"description": "SpaceEngine Catalog syntax definitions (\"grammars\") for the Atom text editor",
+	"license": "BSD-2-Clause",
+	"engines": {
+		"atom": "*",
+		"node": "*"
+	}
+}
