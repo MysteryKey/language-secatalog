@@ -8,3 +8,9 @@ git clone https://hub.fastgit.org/MysteryKey/language-secatalog.git
 # If the above doesn't work just use the normal GitHub.com URL
 apm link language-secatalog
 ```
+## Updating
+```sh
+cd language-secatalog
+# This is suggested if you aren't messing aroung with local changes
+git config pull.rebase true
+git pull
