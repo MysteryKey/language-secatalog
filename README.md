@@ -11,6 +11,6 @@ apm link language-secatalog
 ## Updating
 ```sh
 cd language-secatalog
-# This is suggested if you aren't messing aroung with local changes
+# This is suggested if you aren't messing around with local changes
 git config pull.rebase true
 git pull
