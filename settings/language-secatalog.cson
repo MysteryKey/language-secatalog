@@ -1,5 +1,7 @@
 '.text.sc':
 	'editor':
+		'commentStart': '// '
 		'softTabs': false
-		'increaseIndentPattern': '{'
-		'decreaseIndentPattern': '}'
+		'increaseIndentPattern': '^\\s*(\\{[^}]*)$'
+		'decreaseIndentPattern': '^\\s*}\\s*$'
+		# 'foldEndPattern': '^\\s*}\\s*$'

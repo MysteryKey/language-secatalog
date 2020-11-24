@@ -1,109 +1,108 @@
 'scopeName': 'text.sc'
 'name': 'SpaceEngine Catalog'
 'fileTypes': [
-  'sc'
+	'sc'
 ]
 'patterns': [
-  {
-    'name': 'keyword.operator.object-type.sc'
-    'match': '\\b(GalaxyModel|Galaxy|Cluster|Nebula|Star|Planet|Moon|DwarfMoon)\\b'
-  }
-  {
-    'include': '#comments'
-  }
-  {
-    'include': '#block'
-  }
-  {
-    'include': '#string'
-  }
+	{
+		'name': 'keyword.operator.object-type.sc'
+		'match': '\\b(GalaxyModel|Galaxy|Cluster|Nebula|Star|Planet|Moon|DwarfMoon)\\b'
+	}
+	{
+		'include': '#comments'
+	}
+	{
+		'include': '#block'
+	}
+	{
+		'include': '#string'
+	}
 ]
 'repository':
-  'block':
-    'patterns': [
-      {
-        'begin': '{'
-        'beginCaptures':
-          '0':
-            'name': 'punctuation.section.block.begin.bracket.curly.sc'
-        'end': '}'
-        'endCaptures':
-          '0':
-            'name': 'punctuation.section.block.end.bracket.curly.sc'
-        'name': 'meta.block.sc'
-        'patterns': [
-          {
-            'include': '#block_innards'
-          }
-        ]
-      }
-    ]
-  'block_innards':
-    'patterns': [
-      {
-        'include': '#block'
-      }
-      {
-        'include': '#boolean'
-      }
-      {
-        'include': '#comments'
-      }
-      {
-        'include': '#string'
-      }
-      {
-        'include': '#number'
-      }
-    ]
-  'boolean':
-    'patterns':
-      [
-        {
-          'match': '\\b(true|false)\\b'
-          'name': 'constant.language.sc'
-        }
-      ]
-  'comments':
-    'patterns': [
-      {
-        'begin': '/\\*'
-        'beginCaptures':
-          '0':
-            'name': 'punctuation.definition.comment.begin.sc'
-        'end': '\\*/'
-        'endCaptures':
-          '0':
-            'name': 'punctuation.definition.comment.end.sc'
-        'name': 'comment.block.sc'
-      }
-      {
-        'begin': '//'
-        'beginCaptures':
-          '0':
-            'name': 'punctuation.definition.comment.sc'
-        'end': '(?=\\n)'
-        'name': 'comment.line.double-slash.sc'
-      }
-    ]
-  'string':
-    'patterns': [
-      {
-        'begin': '"'
-        'beginCaptures':
-          '0':
-            'name': 'punctuation.definition.string.begin.sc'
-        'end': '"'
-        'endCaptures':
-          '0':
-            'name': 'punctuation.definition.string.end.sc'
-        'name': 'string.quoted.double.sc'
-      }
-    ]
-  'number':
-    'patterns': [
-      {
-        'match': '(\\b|\\-)\\d+(\\.\\d+)?([eE][+-]?\\d+)?'
-        'name': 'constant.numeric.sc'
-      }
-    ]
+	'block':
+		'patterns': [
+			{
+				'begin': '{'
+				'beginCaptures':
+					'0':
+						'name': 'punctuation.section.block.begin.bracket.curly.sc'
+				'end': '}'
+				'endCaptures':
+					'0':
+						'name': 'punctuation.section.block.end.bracket.curly.sc'
+				'name': 'meta.block.sc'
+				'patterns': [
+					{
+						'include': '#block_innards'
+					}
+				]
+			}
+		]
+	'block_innards':
+		'patterns': [
+			{
+				'include': '#block'
+			}
+			{
+				'include': '#boolean'
+			}
+			{
+				'include': '#comments'
+			}
+			{
+				'include': '#string'
+			}
+			{
+				'include': '#number'
+			}
+		]
+	'boolean':
+		'patterns': [
+			{
+				'match': '\\b(true|false)\\b'
+				'name': 'constant.language.sc'
+			}
+		]
+	'comments':
+		'patterns': [
+			{
+				'begin': '/\\*'
+				'beginCaptures':
+					'0':
+						'name': 'punctuation.definition.comment.begin.sc'
+				'end': '\\*/'
+				'endCaptures':
+					'0':
+						'name': 'punctuation.definition.comment.end.sc'
+				'name': 'comment.block.sc'
+			}
+			{
+				'begin': '//'
+				'beginCaptures':
+					'0':
+						'name': 'punctuation.definition.comment.sc'
+				'end': '(?=\\n)'
+				'name': 'comment.line.double-slash.sc'
+			}
+		]
+	'string':
+		'patterns': [
+			{
+				'begin': '"'
+				'beginCaptures':
+					'0':
+						'name': 'punctuation.definition.string.begin.sc'
+				'end': '"'
+				'endCaptures':
+					'0':
+						'name': 'punctuation.definition.string.end.sc'
+				'name': 'string.quoted.double.sc'
+			}
+		]
+	'number':
+		'patterns': [
+			{
+				'match': '(\\b|\\-)\\d+(\\.\\d+)?([eE][+-]?\\d+)?'
+				'name': 'constant.numeric.sc'
+			}
+		]
