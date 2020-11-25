@@ -6,7 +6,7 @@
 'patterns': [
 	{
 		'name': 'keyword.operator.object-type.sc'
-		'match': '\\b(GalaxyModel|Galaxy|Cluster|Nebula|Star|Planet|Moon|DwarfMoon)\\b'
+		'match': '\\b(GalaxyModel|Galaxy|Cluster|Nebula|StarBarycenter|Star|Barycenter|Planet|Moon|DwarfMoon)\\b'
 	}
 	{
 		'include': '#comments'
